@@ -1,0 +1,218 @@
+/**
+ * My Bible Reading
+ *
+ * @package		my-bible-reading
+ * @author		Jerry Simmons <jerry@ferventsolutions.com>
+ * @copyright	2017 Jerry Simmons
+ * @license		GPL-2.0+
+ *
+ **/
+
+.mbr_plan_name {
+	font-weight: 600;
+	font-size: 120%;
+}
+.mbr_plan_pace {
+	font-style: italic; }
+.mbr_plan_description {
+	background-color: rgba(255,255,255,.5);
+	padding: 10px;
+	display: block;
+	width: 400px;
+	margin-left: 25px;
+}
+
+.mbr_reminder_row:not(.mbr_show_reminder_fields) { display: none; }
+
+
+
+
+/*------------------------------------------------*/
+/*----------[ CHOOSE READING PLAN PAGE ]----------*/
+/*------------------------------------------------*/
+
+/*** CUSTOMIZE READING SCHEDULE FORM ***/
+	.mbr_customize_reading_section { padding: 0px !important; }
+	#mbr_customize_form {
+		max-width: 800px;
+	}
+	#mbr_customize_form h2 {
+		display: block;
+		text-align: center;
+		padding-bottom: 20px;
+		font-size: 180%;
+		font-weight: 800;
+		color: #008E94;
+	}
+	#mbr_customize_form h3 {
+		padding-bottom: 20px;
+		font-size: 140%;
+		font-weight: 600;
+		color: #008E94;
+		float: left;
+		padding-right: 20px;
+	}
+
+	/* Registration Form - Adjustments */
+	#mbr_registration_form h2 { margin-bottom: 20px; }
+
+	/* Form Button */
+	.mb_customize_button_wrapper { text-align: center; }
+	#mbr_customize_form .et_pb_button {
+		color: #fff;
+		transition: all .5s ease;
+		box-shadow: 5px 5px 10px 0px rgba(0,0,0,.15);
+	}
+	#mbr_customize_form .et_pb_button:hover { cursor: pointer; }
+
+	#mbr_customize_form input[type=radio] { zoom: 2; }
+	body.wp-admin #mbr_customize_form input[type=radio] { zoom: 1; }
+
+	.mbr_customize_form_divider {
+		position: relative;
+		display: block;
+		margin: 20px 20% 30px;
+		width: 60%;
+		height: 1px;
+		background-color: #008E94;
+	}
+
+	/* Select Reading Plan */
+	.mbr_select_plan {
+		width: 100%;
+		display: inline-block;
+		margin: 10px 0;
+	}
+
+	.mbr_plan_name {
+		padding-left: 5px;
+		font-size: 110%;
+		font-weight: 600;
+		color: #008E94;
+	}
+	.mbr_plan_pace {
+		font-style: italic;
+		padding-left: 10px;
+		font-weight: 200;
+	}
+
+	.mbr_plan_details_wrapper {
+		width: 100%;
+		padding: 20px;
+		display: grid;
+		grid-gap: 5px;
+		grid-template-columns: repeat(2, 1fr);
+		border: solid 2px rgba(0,0,0,.05);
+		background-color: rgba(0,0,0,.05);
+		margin: 10px 0px 20px;
+	}
+
+	.mbr_plan_details_column1 {
+		display: none;
+		padding-right: 20px; }
+	.mbr_plan_details_column2 {
+		display: none;
+		padding-left: 20px; }
+	.mbr_select_plan input.bi3y:checked ~ .mbr_plan_details_wrapper .bi3y { display: initial; }
+	.mbr_select_plan input.nt1y:checked ~ .mbr_plan_details_wrapper .nt1y { display: initial; }
+	.mbr_select_plan input.bi1y-1track:checked ~ .mbr_plan_details_wrapper .bi1y-1track { display: initial; }
+	.mbr_select_plan input.bi1y-3tracks:checked ~ .mbr_plan_details_wrapper .bi1y-3tracks { display: initial; }
+	.mbr_select_plan input.bi6m:checked ~ .mbr_plan_details_wrapper .bi6m { display: initial; }
+
+
+	/* Select Start Date */
+	.mbr_select_start input {
+		border: solid 2px #008E94;
+		height: 40px;
+		margin-top: -8px;
+		padding: 10px;
+		width: 250px;
+		font-size: 120%;
+	}
+
+	/* Get Daily Reminders */
+	.mbr_select_reminders {
+		width: 100%;
+		display: inline-block;
+		margin: 10px 0;
+	}
+	.mbr_select_reminders h3 { padding-bottom: 5px !important; }
+
+	/* Reminder Email */
+	.mbr_reminder_email input {
+		display: block;
+		border: solid 2px #008E94;
+		height: 40px;
+		width: 100%;
+		font-size: 120%;
+		padding: 10px;
+	}
+
+	/* Reminder Text */
+	.mbr_reminder_mobile input {
+		border: solid 2px #008E94;
+		height: 40px;
+		width: 100%;
+		font-size: 120%;
+		padding: 10px;
+	}
+	.mbr_reminder_mobile .mobile_cost_note {
+		text-align: center;
+		font-style: italic;
+	}
+
+	/* Reminder Time */
+	.mbr_select_reminder_time {
+		display: inline-block;
+		margin: 25px 0px 25px;
+	}
+	.mbr_select_reminder_time select {
+		border: solid 2px #008E94;
+		height: 40px;
+		width: 100px;
+		font-size: 120%;
+		padding: 10px;
+		color: #000;
+		margin-right: 20px;
+		margin-top: -7px;
+	}
+
+	/* Select Time Zone */
+	.mbr_select_timezone {
+		display: inline-block;
+	}
+	.mbr_select_timezone input {
+		border: solid 2px #008E94;
+		min-height: 40px;
+		margin-top: -8px;
+		width: 350px;
+		font-size: 120%;
+		padding: 10px !important;
+	}
+
+	/* Screen Size Adjustments */
+	@media (max-width: 767px) {
+		#mbr_customize_form h3 {
+			width: 100%;
+			padding: 5px;
+			margin-bottom: 5px; }
+		.mbr_plan_pace { display: block; }
+		.mbr_plan_details_wrapper { grid-template-columns: repeat(1, 1fr); }
+		.mbr_plan_details_column1 { padding-right: 0px; }
+		.mbr_plan_details_column2 { padding-left: 0px; }
+		.mbr_plan_details_wrapper h4,
+		.mbr_plan_details_wrapper p {
+			width: 100%;
+			text-align: center !important;
+		}
+		.mbr_plan_details_wrapper h4:last-child { margin-top: 20px; }
+		.mbr_select_start { text-align: center; }
+		.mbr_select_reminders { text-align: center; }
+		.mbr_select_reminders input { text-align: center; }
+		.mbr_select_reminder_time select:last-child { margin-right: 0px !important; }
+	}
+
+	/* Form Saved Message */
+	.settings_saved_message h2 { text-align: center; }
+
+

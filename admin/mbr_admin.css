@@ -1,0 +1,26 @@
+/**
+ * My Bible Reading
+ *
+ * @package		my-bible-reading
+ * @author		Jerry Simmons <jerry@ferventsolutions.com>
+ * @copyright	2017 Jerry Simmons
+ * @license		GPL-2.0+
+ *
+ **/
+
+.mbr_plan_name {
+	font-weight: 600;
+	font-size: 120%;
+}
+.mbr_plan_pace {
+	font-style: italic; }
+.mbr_plan_description {
+	background-color: rgba(255,255,255,.5);
+	padding: 10px;
+	display: block;
+	width: 400px;
+	margin-left: 25px;
+}
+
+.mbr_reminder_row:not(.mbr_show_reminder_fields) { display: none; }
+
